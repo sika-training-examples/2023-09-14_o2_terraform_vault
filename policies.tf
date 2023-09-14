@@ -7,3 +7,8 @@ path "*" {
 }
 EOT
 }
+
+resource "vault_policy" "read-all-on-path-secret" {
+  name = "read-all-on-path-secret"
+  policy = file("policies/read-all-on-path-secret.hcl")
+}
